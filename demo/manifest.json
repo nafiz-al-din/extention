@@ -21,6 +21,7 @@
         "default_icon": {
             "16":"images/16x.png",
             "32":"images/32x.png"
-        }
+        },
+        "default_title": "My hello world extention"
     }
 }
