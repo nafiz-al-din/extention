@@ -28,3 +28,7 @@ chrome.bookmarks.onCreated.addListener(function() {
     console.log({"bookmarks chrome class": chrome.bookmarks});
     console.log('changed');
 });
+
+chrome.commands.onCommand.addListener(command => {
+    console.log(command);
+})
