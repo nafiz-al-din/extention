@@ -27,8 +27,24 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.bookmarks.onCreated.addListener(function() {
     console.log({"bookmarks chrome class": chrome.bookmarks});
     console.log('changed');
+    
+    chrome.browserAction.setBadgeText({text: '2'}, (a) => {
+        console.log({a});
+    });
 });
 
 chrome.commands.onCommand.addListener(command => {
-    console.log(command);
+    chrome.commands.getAll(res => {
+        console.log(res);
+    })
+
+    console.log({command});
 })
+
+chrome.browserAction.onClicked.addListener(function(tab) { 
+    console.log({tab});
+
+    chrome.browserAction.setBadgeText({}, (a) => {
+        console.log({a});
+    });
+});
