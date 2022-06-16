@@ -12,5 +12,31 @@
     "background": {
         "scripts": ["/app/src/background.js"],
         "persistent": false
-    }
+    },
+    "permissions": [
+        "<all_urls>",
+        "contextMenus",
+        "tabs",
+        "nativeMessaging",
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16":"images/16x.png",
+            "32":"images/32x.png"
+        },
+        "default_title": "My hello world extention",
+        "default_popup": "extPopup.html"
+    },
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "/app/src/content.js"
+            ]
+        }
+    ]
 }
