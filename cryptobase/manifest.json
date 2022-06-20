@@ -1,0 +1,25 @@
+{
+    "name": "cryptoBase",
+    "manifest_version": 3,
+    "description":"cryptobase",
+    "version":"1.0.0",
+    "icons": {
+        "16":"images/16x.png",
+        "32":"images/32x.png",
+        "48":"images/48x.png",
+        "128":"images/128x.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [],
+    "host_permissions": [],
+    "action": {
+        "default_icon": {
+            "16":"images/16x.png",
+            "32":"images/32x.png"
+        },
+        "default_title": "Cryptobase",
+        "default_popup": "popup.html"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "budget-app",
+    "description":"this is course from udemy",
+    "version":"1.0",
+    "icons": {
+        "16":"images/16x.png",
+        "32":"images/32x.png",
+        "48":"images/48x.png",
+        "128":"images/128x.png"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "<all_urls>",
+        "contextMenus",
+        "tabs",
+        "nativeMessaging",
+        "activeTab",
+        "storage"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16":"images/16x.png",
+            "32":"images/32x.png"
+        },
+        "default_title": "budget manager",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": []
+}
